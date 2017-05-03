@@ -1,0 +1,38 @@
+.footer-social
+  display: flex
+  width: 100%
+
+  &__item
+    transition: opacity .15s ease-in-out
+    background-color: #8297a7
+    width: 44px
+    height: 44px
+    margin-right: 10px
+    border-radius: 100%
+
+    display: flex
+    align-items: center
+    justify-content: center
+
+    opacity: 0.5
+    color: white
+    +MAX(1025px)
+      opacity: 1
+
+    &:hover
+      opacity: 1
+
+    &.-facebook
+      background-color: #2e3192
+
+    &.-twitter
+      background-color: #00aeef
+
+    &.-youtube
+      background-color: #ed3123
+
+    &.-linkedin
+      background-color: #171a8f
+
+    i
+      font-size: 18px

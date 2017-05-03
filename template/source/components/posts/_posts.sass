@@ -1,0 +1,31 @@
+.posts
+  background-color: #fd634e
+  +MAX(767px)
+    padding: 15px 0
+
+  &__container
+    +container
+
+  &__box
+    display: flex
+    width: 100%
+    flex-wrap: wrap
+
+  &__item
+    display: flex
+    width: 33.33%
+    +MAX(969px)
+      width: 50%
+    +MAX(767px)
+      width: 100%
+      margin-bottom: 15px
+
+    &:last-of-type
+      margin-bottom: 0
+
+    &.-large
+      width: 66.66%
+      +MAX(969px)
+        width: 50%
+      +MAX(767px)
+        width: 100%

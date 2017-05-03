@@ -1,0 +1,152 @@
+.menu
+  display: flex
+  width: 100%
+  height: 100%
+  justify-content: flex-start
+  align-items: stretch
+
+  .-menu-wrapped &
+    display: block
+    height: inherit
+
+  &__item
+    position: relative
+    display: flex
+    align-items: center
+    flex-wrap: wrap
+
+    .-menu-wrapped &
+      min-height: 44px
+
+  &__link
+    transition: color .15s ease-in-out
+    +fontMontserrat
+    font-size: 13px
+
+    display: flex
+    height: 100%
+    align-items: center
+    padding: 0 15px
+    color: colors($menu-color)
+    text-transform: uppercase
+    cursor: pointer
+
+    .-header-landingPage-background &
+      color: colors($menu-color, alternative)
+      &:hover
+        color: colors($menu-color, hover)
+
+    .-nav-active &
+      color: colors($menu-color, hover)
+
+    .-menu-wrapped &
+      min-height: 44px
+      width: 100%
+
+  &__hiperlink
+    transition: color .15s ease-in-out, border .15s ease-in-out, background-color .15s ease-in-out
+    +fontMontserrat
+    font-size: 13px
+
+    display: flex
+    align-items: center
+    padding: 7px 15px
+    color: colors($menu-color)
+    text-transform: uppercase
+    cursor: pointer
+
+    border-radius: 30px
+    border: 1px solid colors($menu-color, border-base)
+    background-color: colors($menu-color, background-base)
+
+    .-header-landingPage-background &
+      color: colors($menu-color, hover)
+      border: 1px solid colors($menu-color, border-alternative)
+      &:hover
+        color: colors($menu-color, base)
+        border: 1px solid colors($menu-color, border-alternative)
+        background-color: colors($menu-color, background-alternative)
+
+    .-nav-active &
+      color: colors($menu-color, hover)
+      border: 1px solid colors($menu-color, border-hover)
+      background-color: colors($menu-color, background-hover)
+
+    .-menu-wrapped &
+      min-height: 44px
+      width: 100%
+
+  &__dropdown
+    position: absolute
+    right: 0
+    top: 0
+    height: 44px
+    width: 44px
+    display: flex
+    align-items: center
+    justify-content: center
+    cursor: pointer
+    color: white
+    +MIN(1025px)
+      display: none
+    &:hover
+      color: colors($menu-color, hover)
+
+    .-header-landingPage-background &
+      color: colors($menu-color, alternative)
+      &:hover
+        color: colors($menu-color, hover)
+
+    .-add
+      display: block
+      .-nav-active &
+        display: none
+
+    .-remove
+      display: none
+      .-nav-active &
+        display: block
+
+  &__submenu
+    display: none
+    width: 200px
+    position: absolute
+    top: 100%
+    left: 0
+    right: 0
+    background-color: colors($menu-color)
+
+    .-nav-active &
+      display: block
+
+    .-menu-wrapped &
+      width: 100%
+      position: relative
+      background-color: transparent
+
+    .-nav-right-align &
+      right: 0
+      left: inherit
+
+  &__subitem
+    position: relative
+    display: flex
+    align-items: center
+
+  &__sublink
+    transition: color .15s ease-in-out
+    display: block
+    width: 100%
+    +fontMontserrat
+    font-size: 13px
+    padding: 7px 15px
+    font-weight: 300
+    border-top: 1px solid #eeeeee
+    color: colors($menu-color, alternative)
+    &:hover
+      color: colors($menu-color)
+      background-color: colors($menu-color, hover)
+
+    .-menu-wrapped &
+      color: colors($menu-color)
+      border-top: 1px solid transparent

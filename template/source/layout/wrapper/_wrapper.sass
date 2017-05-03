@@ -1,0 +1,33 @@
+.wrapper
+  position: relative
+
+  &__navigation
+    position: fixed
+    width: 250px
+    transform: translate(0, 0)
+    background-color: #0d1119
+    top: 0
+    bottom: 0
+    left: 0
+    z-index: 1
+    opacity: 0
+
+  &__close
+    display: flex
+    align-items: center
+    height: 64px
+    width: 100%
+    background-color: colors($menu-color, hover)
+    color: colors($menu-color)
+    +fontMontserrat
+    font-weight: 700
+    font-size: 16px
+    cursor: pointer
+    padding: 0 5px
+    i
+      margin-right: 5px
+
+  &__page
+    position: relative
+    transition: transform .3s ease-in-out
+    z-index: 2

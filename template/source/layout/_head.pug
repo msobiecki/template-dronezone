@@ -1,0 +1,20 @@
+﻿head
+  title Szablon
+
+  meta(charset='utf-8')
+  meta(name='title', content='Szablon')
+  meta(name='description', content='Szablon opis')
+  meta(name='keywords', content='Szablon keywords')
+  meta(name='viewport', content='width=device-width, initial-scale=1, maximum-scale=1')
+
+  include favicon/_favicon
+
+  //- plik styli do którego pakujemy wszystkie style, łącznie z używanymi paczkami NPM
+  link(rel='stylesheet', href='css/main.css')
+
+  //- skrypt na potrzeby live reload, do usuniecia przy wdrożeniu
+  script.
+    document.write('<script src="http://'
+      + (location.host || 'localhost').split(':')[0]
+      + ':35729/livereload.js"></'
+      + 'script>')

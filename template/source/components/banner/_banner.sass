@@ -1,0 +1,177 @@
+//TODO Wyprowadzic kolory do base/colors.sass
+.banner
+  overflow: hidden
+  position: relative
+
+  &__slider
+
+  &__item
+    outline: none
+
+    position: relative
+
+  &__image
+    background-size: cover
+    background-repeat: no-repeat
+    background-position: center center
+
+  &__box
+    position: absolute
+    top: 0
+    left: 0
+    right: 0
+    bottom: 0
+    display: flex
+    align-items: center
+    justify-content: center
+
+    .-banner-content-right &
+      justify-content: flex-end
+      margin-right: 45px
+      +MAX(767px)
+        justify-content: center
+        margin-right: 0
+
+    .-banner-content-left &
+      justify-content: flex-start
+      margin-left: 45px
+      +MAX(767px)
+        justify-content: center
+        margin-left: 0
+
+  &__content
+    display: none
+    &.-banner-content-show
+      display: block
+
+  &__text
+    transition: color .15s ease-in-out
+
+    display: block
+    text-align: center
+    max-width: 600px
+    width: 100%
+
+    +fontMontserrat
+    font-weight: 300
+    line-height: 1
+    color: white
+
+    cursor: default
+
+    h1
+      font-size: 48px
+      font-weight: bold
+      margin-bottom: 15px
+      text-shadow: 0px 0px 2px rgba(150, 150, 150, 1)
+      +MAX(767px)
+        font-size: 36px
+
+    p
+      font-size: 18px
+      line-height: 1.7
+      text-shadow: 0px 0px 2px rgba(150, 150, 150, 1)
+
+    a.banner__item:hover &
+      cursor: pointer
+      text-decoration: none
+
+  &__toggler
+    display: flex
+    align-items: center
+    justify-content: center
+
+    margin: 20px auto 5px
+
+    height: 48px
+    width: 48px
+
+    cursor: pointer
+
+    outline: none
+
+    +MAX(1025px)
+      display: none
+
+    i
+      margin-top: 5px
+      margin-left: 2px
+      +fontMaterial
+      font-size: 48px
+      line-height: 1
+      color: white
+
+  &__dots
+    position: absolute
+    left: 50%
+    transform: translateX(-50%)
+    bottom: 10px
+    margin: 0 3px
+    ul
+      display: flex
+
+  &__dot
+    transition: background-color .15s ease-in-out
+
+    margin: 0 3px
+    width: 5px
+    height: 5px
+    cursor: pointer
+
+    background-color: rgba(0, 0, 0, 0.5)
+
+    .slick-active &
+      background-color: rgba(255, 255, 255, 0.8)
+
+    &:hover
+      background-color: rgba(255, 255, 255, 1)
+
+  &__arrow
+    position: absolute
+    cursor: pointer
+    top: 50%
+    transform: translateY(-50%)
+    color: rgba(255, 255, 255, 0.5)
+    font-size: 36px
+    transition: color 0.3s ease
+
+    &:hover
+      color: rgba(255, 255, 255, 1)
+
+    &.-prev
+      left: 5px
+
+    &.-next
+      right: 5px
+
+    &.slick-disabled
+      opacity: 0
+
+  &__links
+    display: flex
+    flex-wrap: wrap
+    justify-content: center
+    padding: 35px 0 0 0
+
+  &__link
+    transition: background-color .15s ease-in-out, color .15s ease-in-out, border .15s ease-in-out
+    font-size: 18px
+    font-weight: 300
+    color: #d32721
+    background-color: white
+    border: 1px solid white
+    margin: 5px
+    border-radius: 30px
+    display: flex
+    align-items: center
+    justify-content: center
+    padding: 0 25px
+    height: 50px
+    line-height: 1
+    i
+      margin-right: 5px
+
+    &:hover
+      color: white
+      background-color: transparent
+      border: 1px solid white

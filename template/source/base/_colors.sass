@@ -1,0 +1,28 @@
+@charset "UTF-8"
+
+@function hsb($h-hsb, $s-hsb, $b-hsb, $a: 1)
+  @if $b-hsb == 0
+    @return hsla(0, 0, 0, $a)
+  @else
+    $l-hsl: ($b-hsb/2) * (2 - ($s-hsb/100))
+    $s-hsl: ($b-hsb * $s-hsb) / if($l-hsl < 50, $l-hsl * 2, 200 - $l-hsl * 2)
+    @return hsla($h-hsb, $s-hsl, $l-hsl, $a)
+
+@function colors($color, $tone: "base")
+  @return map-get($color, $tone)
+
+// e.g. $button: (base: white, hover: black, shadow: yellow, shadowHover: darken(yellow, 5))
+// usage: color: colors($button, hover)
+
+// Page Loader Color
+$loader-background: (base: #cb0035)
+
+// Menu Colors
+$menu-color: (base: #ffffff, hover: #cb0035, alternative: #4b4e53, border-base: rgba(255, 255, 255, 0.5), border-hover: rgba(255, 255, 255, 1), border-alternative: #cb0035, background-base: transparent, background-hover: rgba(255, 255, 255, 1), background-alternative: #cb0035)
+
+// Banner Colors
+
+// Features Colors
+$features-color: (base: #5e6372, subtitle: #cb0035, background: #ffffff, tag: #fd634e, text: #656e74, button-color: #ffffff, button-background: #264699)
+
+$text-color: (base: #222626)

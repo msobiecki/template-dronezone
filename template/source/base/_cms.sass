@@ -1,0 +1,149 @@
+@charset "UTF-8"
+
+=CMS
+  padding: 0
+  width: 100%
+
+  // STYLE OGÓLNE
+  blockquote
+    quotes: "“" "„"
+    font-size: 24px
+    padding: 30px 60px
+    margin: 30px 0
+    display: block
+    position: relative
+    text-align: center
+    @media (max-width: 1023px)
+      padding: 25px 50px
+      font-size: 18px
+    @media (max-width: 650px)
+      padding: 20px 40px
+      font-size: 17px
+
+    &:before
+      content: open-quote
+      color: #b0dbe4
+      font-size: 150px
+      position: absolute
+      left: 0
+      top: 0
+      line-height: 120px
+      font-weight: bold
+      @media (max-width: 1023px)
+        font-size: 100px
+        line-height: 90px
+        font-weight: normal
+      @media (max-width: 650px)
+        font-size: 80px
+        line-height: 70px
+
+    &:after
+      content: close-quote
+      color: #b0dbe4
+      font-size: 150px
+      position: absolute
+      line-height: 65px
+      right: 0
+      bottom: 50px
+      font-weight: bold
+      @media (max-width: 1023px)
+        font-size: 100px
+        line-height: 20px
+        font-weight: normal
+      @media (max-width: 650px)
+        font-size: 80px
+        line-height: 0
+
+  h1
+    font-size: 30px
+    font-weight: 700
+    margin-bottom: 24px
+    line-height: 1.2
+    +fontOpenSans
+    +MAX(970px)
+      margin-bottom: 20px
+
+  h2
+    font-weight: 600
+    font-size: 20px
+    margin-bottom: 25px
+    +fontOpenSans
+    +MAX(969px)
+      margin-bottom: 20px
+
+  h3
+    font-size: 16px
+    font-weight: 600
+    margin-bottom: 25px
+    +fontOpenSans
+    +MAX(969px)
+      margin-bottom: 20px
+
+  h4
+    font-size: 14px
+    font-weight: 600
+    margin-bottom: 25px
+    +fontOpenSans
+
+  p
+    margin-bottom: 25px
+    +MAX(969px)
+      margin-bottom: 20px
+
+  ul
+    margin-bottom: 25px
+    padding: 0 0 0 20px
+    list-style: square
+
+  li
+    margin: 0 0 10px
+
+  img.mainphoto
+    max-width: 100%
+    margin: 0 0 10px 0
+    float: left
+
+  iframe.video
+    width: 100%
+    max-width: 850px
+    height: 480px
+    margin-bottom: 25px
+    +MAX(969px)
+      width: 100%
+      margin-bottom: 20px
+
+  table
+    width: 100%
+    overflow: auto
+    display: block
+
+    tbody
+      display: block
+
+      tr
+        display: flex
+        flex-wrap: wrap
+
+        &:nth-child(even)
+          background-color: #ededed
+
+      th
+        padding: 5px 10px
+        +MAX(969px)
+          padding: 2px 5px
+
+      td
+        padding: 5px 0
+        width: 74.99%
+        +MAX(969px)
+          padding: 2px 0
+        +MAX(769px)
+          width: 59.99%
+
+        &:first-child
+          width: 24.99%
+          padding: 5px 5px 5px 15px
+          +MAX(969px)
+            padding: 5px 5px 5px 10px
+          +MAX(769px)
+            width: 39.99%

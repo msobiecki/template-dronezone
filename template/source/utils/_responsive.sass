@@ -1,0 +1,75 @@
+/* RESOLUTIONS
+ *============================================================================
+
+$phone: 767px
+$phone-md: 600px
+$phone-sm: 480px
+
+$tab: 969px
+$tab-md: 800px
+
+$laptop: 1200px
+
+/* DEVICES REGION
+ *==========================================================================
+
+/* Mobile 0px -> 480px -> 600px -> 767px
+ *--------------------------------------------------------------------------
+=PHONE_ONLY
+  @media (max-width: $phone)
+    @content
+
+=PHONE_ONLY_600
+  @media (max-width: $phone-md)
+    @content
+
+=PHONE_ONLY_480
+  @media (max-width: $phone-sm)
+    @content
+
+/* Tablet 768px -> 800px -> 969px
+ *--------------------------------------------------------------------------
+=TAB_ONLY
+  @media (min-width: $phone + 1px ) and (max-width: $tab)
+    @content
+
+=TAB_ONLY_800
+  @media (max-width: $tab-md)
+    @content
+
+=TAB_MAX
+  @media (max-width: $tab)
+    @content
+
+=TAB_MIN
+  @media (min-width: $phone + 1px)
+    @content
+
+
+/* LAPTOP 970px -> 1199px
+ *--------------------------------------------------------------------------
+=LAPTOP_ONLY
+  @media (min-width: $tab + 1px) and (max-width: $laptop)
+    @content
+
+=LAPTOP_MAX
+  @media (max-width: $laptop)
+    @content
+
+=LAPTOP_MIN
+  @media (min-width: $tab + 1px)
+    @content
+
+/* PC 1200px ->
+ *--------------------------------------------------------------------------
+=PC_ONLY
+  @media (min-width: $laptop + 1px)
+    @content
+
+=MIN($min-width)
+  @media (min-width: $min-width)
+    @content
+
+=MAX($max-width)
+  @media (max-width: $max-width)
+    @content

@@ -1,0 +1,89 @@
+.features
+  background-color: colors($features-color, background)
+
+  &__container
+    +container
+
+  &__box
+    display: flex
+    flex-wrap: wrap
+    margin: 0 -15px
+    padding: 55px 0 55px
+
+  &__item
+    width: 25%
+    padding: 0 15px
+    +MAX(969px)
+      width: 50%
+      margin-bottom: 15px
+    +MAX(767px)
+      margin-bottom: 25px
+      width: 100%
+      text-align: center
+
+  &__icon
+    color: colors($features-color)
+    margin-bottom: 5px
+    cursor: default
+    text-align: center
+    display: flex
+    align-items: center
+    height: 85px
+    i
+      font-size: 64px
+
+    img
+      display: block
+      max-width: 100%
+      margin: 0 auto
+      max-height: 85px
+
+
+  &__subtitle
+    +fontMontserrat
+    font-size: 24px
+    font-weight: 600
+    color: colors($features-color, subtitle)
+    margin-bottom: 15px
+    text-align: center
+    cursor: default
+
+  &__text
+    +fontMontserrat
+    font-size: 14px
+    font-weight: 400
+    color: colors($features-color)
+    margin-bottom: 5px
+    text-align: justify
+    cursor: default
+    +MAX(767px)
+      font-size: 12px
+
+  &__navigation
+    display: flex
+    flex-wrap: wrap
+    justify-content: center
+    width: 100%
+    padding: 25px 0 0 0
+
+  &__button
+    transition: background-color .15s ease-in-out, color .15s ease-in-out, border .15s ease-in-out
+    color: colors($features-color, button-color)
+    background-color: colors($features-color, button-background)
+    font-size: 18px
+    border: 1px solid colors($features-color, button-background)
+    margin: 5px
+    border-radius: 30px
+    display: flex
+    align-items: center
+    justify-content: center
+    padding: 0 25px
+    height: 50px
+    line-height: 1
+    i
+      margin-right: 5px
+
+    &:hover
+      color: colors($features-color, button-background)
+      background-color: transparent
+      border: 1px solid colors($features-color, button-background)

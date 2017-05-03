@@ -1,0 +1,26 @@
+.navigation
+  display: flex
+  width: 100%
+
+  &__box
+    display: flex
+    width: 100%
+    flex-wrap: nowrap
+    align-items: stretch
+    justify-content: flex-end
+
+    min-height: 44px
+
+  &__menu
+    +MAX(1024px)
+      display: none
+
+  &__toggle
+    display: none
+    align-items: center
+
+    +MAX(1024px)
+      display: flex
+
+    .-navigation-mobile &
+      display: flex

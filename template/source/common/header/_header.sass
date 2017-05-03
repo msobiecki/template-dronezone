@@ -1,0 +1,42 @@
+.header
+  min-height: 64px
+
+  &__wapper
+    min-height: 64px
+
+  &__content
+    transition: background-color .15s ease-in-out, box-shadow .15s ease-in-out
+    display: block
+    width: 100%
+    min-height: 64px
+
+    background-color: white
+    box-shadow: 0 1px 15px rgba(0,0,0,.15)
+
+    .-header-fixed &
+      position: fixed
+      z-index: 100
+      top: 0
+      left: 0
+      right: 0
+
+    .-header-landingPage &
+      background-color: transparent
+      box-shadow: 0 1px 15px rgba(0,0,0,0)
+
+    .-header-landingPage-background &
+      background-color: white
+      box-shadow: 0 1px 15px rgba(0,0,0,.15)
+
+  &__container
+    padding: 0 25px
+
+  &__box
+    display: flex
+    width: 100%
+    min-height: 64px
+    align-items: stretch
+    justify-content: space-between
+
+  &__item
+    display: flex
