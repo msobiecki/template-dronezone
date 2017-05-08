@@ -1,3 +1,3 @@
 # Template-DroneZone
 
-![preview](http://imgur.com/TdzoTq8)
+![preview](http://i.imgur.com/TdzoTq8.jpg)
