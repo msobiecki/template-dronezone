@@ -1,3 +1,3 @@
-# Template-Fitness
+# Template-DroneZone
 
-![preview](https://i.imgur.com/KQwhh2o.jpg)
+![preview](http://i.imgur.com/TdzoTq8.jpg)
