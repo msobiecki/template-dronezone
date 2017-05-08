@@ -1,4 +1,4 @@
-//TODO Map
+//TODO Map Resize event
 var googleMap = (function () {
   var _zoom, _location, _marker, _markers;
 
