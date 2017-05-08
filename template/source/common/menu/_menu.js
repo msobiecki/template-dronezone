@@ -1,13 +1,3 @@
-/* TODO
- WYKRYCIE KIEDY PC KIEDY MOBILE na podstawie AGENTA
- [PC] Hover na glownym elemencie rozwija liste
- [MOBILE] KLIK na plusa rozwija liste
-
- TOGGLER
- Na klika rozwija glowna liste
- I zwija tez
-
- */
 (function () {
   var menu = {
     init: function () {
@@ -39,10 +29,10 @@
     },
     checkOffsetSubmenu: function (item) {
       var submenu = item.find('.menu__submenu');
-      if(submenu.length > 0){
+      if (submenu.length > 0) {
         var leftOffset = submenu.offset().left;
-        var rightOffset = $(window).width() - (leftOffset + submenu.outerWidth())
-        if (rightOffset < 0){
+        var rightOffset = $(window).width() - (leftOffset + submenu.outerWidth());
+        if (rightOffset < 0) {
           item.addClass('-nav-right-align')
         }
       }

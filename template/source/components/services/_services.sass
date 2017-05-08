@@ -1,0 +1,85 @@
+//TODO Colors
+.services
+  position: relative
+  padding: 120px 0
+
+  +MAX(767px)
+    padding: 55px 0
+
+  &__bg
+    position: absolute
+    top: 0
+    left: 0
+    right: 0
+    bottom: 0
+    background-position: center right
+    background-repeat: no-repeat
+    +MAX(1024px)
+      opacity: 0.15
+    +MAX(767px)
+      opacity: 0
+
+  &__container
+    +container
+
+  &__content
+    max-width: 60%
+    width: 100%
+    position: relative
+
+    +MAX(969px)
+      max-width: 100%
+
+  &__title
+    +fontMontserrat
+    font-size: 48px
+    font-weight: bold
+    line-height: 1
+    text-transform: uppercase
+    cursor: default
+    margin-bottom: 25px
+    color: #cb0035
+    +MAX(969px)
+      font-size: 22px
+
+  &__text
+    +fontMontserrat
+    font-size: 18px
+    font-weight: bold
+    color: colors($features-color)
+    margin-bottom: 5px
+    text-align: justify
+    cursor: default
+
+  &__box
+    padding: 20px 0
+
+  &__item
+    position: relative
+    display: flex
+    align-items: center
+
+    +fontMontserrat
+    font-size: 14px
+    font-weight: 300
+    color: colors($features-color)
+    margin-bottom: 5px
+    text-align: justify
+    cursor: default
+    padding-left: 65px
+    min-height: 55px
+
+  &__number
+    position: absolute
+    left: 0
+    top: 50%
+    transform: translate(0,-50%)
+    width: 49px
+    height: 49px
+    border: 2px solid #c7cde0
+    display: inline-flex
+    align-items: center
+    justify-content: center
+    border-radius: 100%
+
+

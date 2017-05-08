@@ -1,0 +1,128 @@
+.halfbox
+
+  &__item
+    display: flex
+    flex-wrap: wrap
+
+    min-height: 470px
+
+    +MAX(969px)
+      min-height: 350px
+    +MAX(767px)
+      align-items: flex-start
+
+  &__imagebox
+    position: relative
+    width: 50%
+    background-color: colors($halfbox-color, imageBg)
+    background-size: cover
+    background-repeat: no-repeat
+    background-position: center center
+    order: 1
+    +MAX(767px)
+      height: 200px
+      width: 100%
+
+    .halfbox__item:nth-of-type(odd) &
+      order: 2
+      +MAX(767px)
+        order: 1
+
+
+  &__content
+    position: relative
+    background-color: colors($halfbox-color, background)
+
+    width: 50%
+
+    order: 2
+
+    .halfbox__item:nth-of-type(odd) &
+      order: 1
+      +MAX(767px)
+        order: 2
+
+    +MAX(767px)
+      width: 100%
+
+  &__details
+    position: absolute
+
+    left: 50%
+    top: 50%
+
+    transform: translate(-50%, -50%)
+
+    max-width: 650px
+    width: 100%
+    padding: 0 25px
+    +MAX(767px)
+      position: relative
+
+      left: inherit
+      right: inherit
+      transform: translate(0,0)
+      padding: 45px 15px
+
+  &__title
+    +fontMontserrat
+    font-size: 48px
+    font-weight: bold
+    line-height: 1
+    text-transform: uppercase
+    cursor: default
+    margin-bottom: 5px
+    color: colors($halfbox-color, subtitle)
+
+    +MAX(969px)
+      font-size: 22px
+
+  &__text
+    +fontMontserrat
+    font-size: 18px
+    font-weight: normal
+    text-align: justify
+    cursor: default
+    color: colors($halfbox-color)
+
+    +MAX(969px)
+      font-size: 14px
+
+  &__navigation
+    display: flex
+    flex-wrap: wrap
+    justify-content: flex-start
+    width: 100%
+    padding: 25px 0 0 0
+
+  &__button
+    transition: background-color .15s ease-in-out, color .15s ease-in-out, border .15s ease-in-out
+    color: colors($features-color, button-color)
+    background-color: colors($features-color, button-background)
+    font-size: 18px
+    border: 1px solid colors($features-color, button-background)
+    margin: 5px
+    border-radius: 30px
+    display: flex
+    align-items: center
+    justify-content: center
+    padding: 0 25px
+    height: 50px
+    line-height: 1
+    i
+      margin-right: 5px
+
+    &:hover
+      color: colors($features-color, button-background)
+      background-color: transparent
+      border: 1px solid colors($features-color, button-background)
+
+  &__hiperlink
+    position: absolute
+    top: 0
+    bottom: 0
+    left: 0
+    right: 0
+    display: flex
+    align-items: center
+    justify-content: center

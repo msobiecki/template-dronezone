@@ -1,0 +1,60 @@
+//TODO Colors input
+.newsletter
+  &__title
+    +fontMontserrat
+    font-size: 48px
+    font-weight: bold
+    line-height: 1
+    text-transform: uppercase
+    cursor: default
+    margin-bottom: 25px
+    color: colors($newsletter-color)
+
+    +MAX(969px)
+      font-size: 22px
+
+  &__content
+    display: flex
+    justify-content: center
+
+  &__inputbox
+    position: relative
+    display: flex
+    justify-content: space-between
+    border: 1px solid rgba(255, 255, 255, .5)
+    background-color: rgba(255, 255, 255, .3)
+    height: 50px
+    max-width: 395px
+    width: 100%
+    border-radius: 30px
+  &__input
+    width: 100%
+    background-color: transparent
+    border: 0
+    color: white
+    padding: 0 25px
+    outline: none
+    &::-webkit-input-placeholder
+      color: white
+    &::-moz-placeholder
+      color: white
+    &:-ms-input-placeholder
+      color: white
+    &:-moz-placeholder
+      color: white
+
+
+  &__submit
+    transition: background-color .15s ease-in-out, color .15s ease-in-out
+    background-color: white
+    color: #cb0035
+    height: 48px
+    width: 135px
+    border-radius: 30px
+    font-weight: 300
+    font-size: 18px
+    border: 0
+    cursor: pointer
+    &:hover
+      background-color: #cb0035
+      color: white

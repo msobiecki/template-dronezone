@@ -1,11 +1,8 @@
+//TODO FOOTER COLORS
 .footer
   position: relative
-  background-color: #0d1119
-  padding: 80px 0
-  +MAX(969px)
-    padding: 45px 0
-  +MAX(767px)
-    padding: 25px 0
+  background-color: white
+  padding: 25px 0
 
   &__container
     +container
@@ -14,6 +11,7 @@
     display: flex
     width: 100%
     flex-wrap: wrap
+    justify-content: center
 
   &__item
     padding: 0 15px
@@ -25,3 +23,12 @@
     &:last-of-type
       +MAX(969px)
         order: 1
+
+  &__text
+    +fontMontserrat
+    font-size: 18px
+    font-weight: 300
+    color: #a7acbc
+    margin-bottom: 5px
+    text-align: center
+    cursor: default

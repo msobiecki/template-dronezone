@@ -1,3 +1,4 @@
+// Banner
 .banner.js-banner.-banner-slick
   .banner__slider(data-slick='{"speed": 3000, "autoplaySpeed": 5000}')
     .banner__item
@@ -16,7 +17,6 @@
               a.banner__link(href='#') Ask for
               a.banner__link(href='#') Ask for pr
 
-          span.banner__toggler(data-href="#contentPage" title="Przejdź dalej") <i class="material-icons">keyboard_arrow_down</i>
     a.banner__item(href="#").-banner-content-left
       .banner__image(style="background-image: url('source/components/banner/src/banner-two.jpg')")
       .banner__box
@@ -25,7 +25,6 @@
             h1 Film your event with us!
             p Pellentesque eget nunc sit amet urna ullamcorper fermentum et eu leo. Nunc vel nibh tempor, pharetra lectus congue, luctus orci.
 
-          span.banner__toggler(data-href="#contentPage" title="Przejdź dalej") <i class="material-icons">keyboard_arrow_down</i>
     a.banner__item(href="#").-banner-content-right
       .banner__image(style="background-image: url('source/components/banner/src/banner-two.jpg')")
       .banner__box
@@ -35,6 +34,8 @@
             p Pellentesque eget nunc sit amet urna ullamcorper fermentum et eu leo. Nunc vel nibh tempor, pharetra lectus congue, luctus orci.
 
 
-          span.banner__toggler(data-href="#contentPage" title="Przejdź dalej") <i class="material-icons">keyboard_arrow_down</i>
+  span.banner__toggler(data-href="#contentPage" title="Przejdź dalej")
+    img.banner__togglerImg(src="source/components/banner/src/scroll.png" alt="Toggle Down")
+    span.banner__togglerText scroll down
   .banner__dots
   .banner__arrows

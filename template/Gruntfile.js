@@ -10,7 +10,8 @@ module.exports = function (grunt) {
     'node_modules/malihu-custom-scrollbar-plugin/jquery.mCustomScrollbar.concat.min.js',
     'node_modules/hammerjs/hammer.min.js',
     'node_modules/jquery-hammerjs/jquery.hammer.js',
-    'node_modules/wicg-focus-ring/dist/focus-ring.js'
+    'node_modules/wicg-focus-ring/dist/focus-ring.js',
+    'node_modules/jarallax/dist/jarallax.min.js',
   ];
 
   grunt.initConfig({
