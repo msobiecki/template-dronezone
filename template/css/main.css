@@ -6,6 +6,7 @@
 @import url(../node_modules/hamburgers/dist/hamburgers.min.css);
 @import url(../node_modules/malihu-custom-scrollbar-plugin/jquery.mCustomScrollbar.css);
 @import url(../node_modules/font-awesome/css/font-awesome.min.css);
+@import url(../node_modules/magnific-popup/dist/magnific-popup.css);
 @import url("https://fonts.googleapis.com/css?family=Montserrat:300,400,700&subset=latin-ext");
 @import url("https://fonts.googleapis.com/icon?family=Material+Icons");
 html, body, div, span, applet, object, iframe,
@@ -659,7 +660,6 @@ body {
 
 .footer {
   position: relative;
-  background-color: white;
   padding: 25px 0;
 }
 
@@ -802,7 +802,7 @@ body {
   font-family: 'Montserrat', sans-serif;
   font-weight: 300;
   line-height: 1;
-  color: white;
+  color: #ffffff;
   cursor: default;
 }
 
@@ -864,7 +864,7 @@ a.banner__item:hover .banner__text {
 }
 
 .banner__togglerText {
-  color: white;
+  color: #ffffff;
   font-size: 9px;
   width: 100%;
   text-align: center;

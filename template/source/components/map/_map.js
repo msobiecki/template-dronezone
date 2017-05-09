@@ -1,6 +1,5 @@
-//TODO Map Resize event
 var googleMap = (function () {
-  var _zoom, _location, _marker, _markers;
+  var _zoom, _location, _marker, _markers, _mapCenterPosition;
 
   var _mapStyle = [{
     "featureType": "administrative",
@@ -41,10 +40,14 @@ var googleMap = (function () {
       this.catchDOM();
       if (isElement(this.$el)) {
         $.when(this.generateMap(this.$el)).then(this.generateMarker())
+        this.bindEvent();
       }
     },
     catchDOM: function () {
       this.$el = $('.js-map')
+    },
+    bindEvent: function () {
+      $(window).resize(this.resize.bind(this))
     },
     generateMap: function (container) {
       _location = this.$el.data('location');
@@ -58,6 +61,7 @@ var googleMap = (function () {
           mapTypeControl: false,
           styles: _mapStyle
         });
+        _mapCenterPosition = this.mapObject.getCenter();
       }
     },
     generateMarker: function () {
@@ -70,6 +74,11 @@ var googleMap = (function () {
           icon: element.icon
         });
       });
+    },
+    resize: function () {
+      console.log('resize"')
+      google.maps.event.trigger(this.mapObject, "resize");
+      this.mapObject.setCenter(_mapCenterPosition);
     }
   };
 

@@ -12,6 +12,7 @@ module.exports = function (grunt) {
     'node_modules/jquery-hammerjs/jquery.hammer.js',
     'node_modules/wicg-focus-ring/dist/focus-ring.js',
     'node_modules/jarallax/dist/jarallax.min.js',
+    'node_modules/magnific-popup/dist/jquery.magnific-popup.min.js'
   ];
 
   grunt.initConfig({
